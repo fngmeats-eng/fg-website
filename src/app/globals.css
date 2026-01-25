@@ -101,6 +101,17 @@ html {
   -moz-osx-font-smoothing: grayscale;
 }
 
+/* Optional: Scroll snap for full-page sections */
+.scroll-snap-container {
+  scroll-snap-type: y mandatory;
+  overflow-y: scroll;
+  height: 100vh;
+}
+
+.scroll-snap-section {
+  scroll-snap-align: start;
+}
+
 body {
   font-family: var(--font-body);
   background-color: var(--color-primary-900);
