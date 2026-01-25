@@ -59,7 +59,7 @@ export default function Home() {
         subheadline=""
         ctaText=""
         ctaHref=""
-        backgroundImage="/images/hero-cattle-ranch.jpg"
+        backgroundImage="/images/herohomepic.jpeg"
       />
       
       {/* About F&G Meats Section */}

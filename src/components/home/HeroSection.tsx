@@ -94,15 +94,17 @@ export default function HeroSection({
       {/* Hero Banner Background Image */}
       <div className="absolute inset-0 z-0">
         <Image
-          src="/images/hero home pic.jpeg"
+          src={backgroundImage}
           alt="F&G Meats Hero"
           fill
           priority
-          quality={100}
-          className="object-cover"
+          quality={90}
+          sizes="100vw"
+          className="object-cover object-center"
+          style={{ objectPosition: 'center 40%' }}
         />
         {/* Dark overlay for text readability */}
-        <div className="absolute inset-0 bg-black/50"></div>
+        <div className="absolute inset-0 bg-gradient-to-b from-black/40 via-black/50 to-black/60"></div>
       </div>
       
       {/* Content Container - Centered headline only with responsive spacing */}

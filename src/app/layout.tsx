@@ -82,16 +82,6 @@ export default function RootLayout({
         />
       </head>
       <body className="antialiased font-body bg-primary-900 text-neutral-100 min-h-screen flex flex-col relative">
-        {/* Fixed Background Image */}
-        <div className="fixed inset-0 z-0">
-          <div 
-            className="absolute inset-0 bg-cover bg-center bg-fixed"
-            style={{ backgroundImage: 'url(/images/1.jpg)' }}
-          />
-          {/* Dark overlay for readability */}
-          <div className="absolute inset-0 bg-black/60" />
-        </div>
-        
         {/* Content wrapper with relative positioning */}
         <div className="relative z-10 min-h-screen flex flex-col">
           {/* Skip to main content link for keyboard users - Accessibility */}
