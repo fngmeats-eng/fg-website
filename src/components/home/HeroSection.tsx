@@ -88,62 +88,23 @@ export default function HeroSection({
 
   return (
     <section
-      className="relative w-full h-screen min-h-[500px] sm:min-h-[550px] md:min-h-[600px] overflow-hidden"
+      className="relative w-full h-screen min-h-screen overflow-hidden"
       aria-label="Hero section"
     >
-      {/* Background Image - Your cattle ranch image with dimmed overlay */}
-      <div
-        className={`absolute inset-0 transition-opacity duration-500 bg-gradient-to-br from-primary-800 to-primary-900 ${
-          showVideo && videoLoaded ? 'opacity-0' : 'opacity-100'
-        }`}
-      >
+      {/* Hero Banner Background Image */}
+      <div className="absolute inset-0 z-0">
         <Image
-          src="/images/hero-cattle-ranch.jpg?v=3"
-          alt="F&G Meats - Premium cattle ranch with mountains"
+          src="/images/hero home pic.jpeg"
+          alt="F&G Meats Hero"
           fill
-          priority // Preload for <3s load time (Requirement 2.6)
-          quality={90}
-          sizes="100vw"
-          className="object-cover object-center"
-          placeholder="blur"
-          blurDataURL="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDAAYEBQYFBAYGBQYHBwYIChAKCgkJChQODwwQFxQYGBcUFhYaHSUfGhsjHBYWICwgIyYnKSopGR8tMC0oMCUoKSj/2wBDAQcHBwoIChMKChMoGhYaKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCj/wAARCAAIAAoDASIAAhEBAxEB/8QAFgABAQEAAAAAAAAAAAAAAAAAAAUH/8QAIhAAAgEDAwUBAAAAAAAAAAAAAQIDAAQRBRIhBhMiMUFR/8QAFQEBAQAAAAAAAAAAAAAAAAAAAAX/xAAZEQACAwEAAAAAAAAAAAAAAAABAgADESH/2gAMAwEAAhEDEEA/AKOm6Xp9xYW8s1jbSSPGrM7RKSxI5JJHJqfqGi6ZHp91JHp1ojrC7KywqCCFJBBx7pSqVYqxBJxLLuf/2Q=="
-          onError={(e) => {
-            // Fallback to a solid color background if image fails
-            const target = e.target as HTMLImageElement;
-            target.style.display = 'none';
-          }}
+          priority
+          quality={100}
+          className="object-cover"
         />
+        {/* Dark overlay for text readability */}
+        <div className="absolute inset-0 bg-black/50"></div>
       </div>
-
-      {/* Background Video - Optional, with image fallback */}
-      {showVideo && (
-        <div
-          className={`absolute inset-0 transition-opacity duration-500 ${
-            videoLoaded ? 'opacity-100' : 'opacity-0'
-          }`}
-        >
-          <video
-            ref={videoRef}
-            autoPlay
-            muted
-            loop
-            playsInline
-            preload="auto"
-            className="absolute inset-0 w-full h-full object-cover object-center"
-            aria-hidden="true"
-          >
-            <source src={backgroundVideo} type="video/mp4" />
-            {/* Browser doesn't support video tag - image fallback handles this */}
-          </video>
-        </div>
-      )}
-
-      {/* Dimmed Overlay - PowerPoint style dimming effect */}
-      <div
-        className="absolute inset-0 bg-black/40"
-        aria-hidden="true"
-      />
-
+      
       {/* Content Container - Centered headline only with responsive spacing */}
       <div className="relative z-10 h-full flex flex-col items-center justify-center px-5 sm:px-6 lg:px-8 py-16 sm:py-20 text-center max-w-4xl mx-auto">
         {/* Headline - Large, impactful typography with font-heading (Playfair Display) */}

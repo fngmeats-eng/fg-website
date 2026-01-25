@@ -27,25 +27,28 @@ export default function PalmettoFarmsPage() {
       </div>
 
       {/* Program Info Section */}
-      <div className="relative -mt-32 z-10">
+      <div className="relative pt-20 z-10">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="bg-primary-900 rounded-lg p-8 lg:p-12 shadow-2xl text-center">
+          <div className="text-center">
             {/* Program Name */}
-            <h1 className="font-heading text-4xl sm:text-5xl lg:text-6xl text-neutral-100 mb-6 tracking-tight">
+            <h1 className="font-heading text-4xl sm:text-5xl lg:text-6xl text-neutral-100 mb-6 tracking-tight drop-shadow-lg">
               Palmetto Farms
             </h1>
             
             {/* Brief Summary */}
-            <p className="font-body text-xl sm:text-2xl text-neutral-200 leading-relaxed mb-8 max-w-2xl mx-auto">
+            <p className="font-body text-xl sm:text-2xl text-neutral-200 leading-relaxed mb-8 max-w-2xl mx-auto drop-shadow-lg">
               Nearly a century of traditional breeding expertise producing tender, delicate specialty birds with exceptional culinary versatility.
             </p>
             
             {/* Inquire Now Button */}
             <a 
               href="/contact" 
-              className="inline-flex items-center px-10 py-4 bg-accent-500 text-primary-900 font-semibold text-lg rounded-lg hover:bg-accent-400 transition-colors shadow-lg"
+              className="inline-flex items-center px-10 py-4 bg-accent-500 text-primary-900 font-semibold text-lg rounded-lg hover:bg-accent-400 transition-all duration-300 shadow-lg hover:shadow-accent-500/50 hover:scale-105"
             >
               Inquire Now
+              <svg className="ml-2 w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
+              </svg>
             </a>
           </div>
         </div>

@@ -87,7 +87,7 @@ const iconMap: Record<string, LucideIcon> = {
 export default function MissionValues({ mission, values }: MissionValuesProps) {
   return (
     <section
-      className="bg-primary-800 py-16 sm:py-20 lg:py-24"
+      className="py-16 sm:py-20 lg:py-24"
       aria-labelledby="mission-values-heading"
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">

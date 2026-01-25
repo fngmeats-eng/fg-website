@@ -67,7 +67,7 @@ export interface TeamSectionProps {
 export default function TeamSection({ title, members }: TeamSectionProps) {
   return (
     <section
-      className="bg-primary-900 py-16 sm:py-20 lg:py-24"
+      className="py-16 sm:py-20 lg:py-24"
       aria-labelledby="team-section-heading"
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">

@@ -1,5 +1,6 @@
 import type { Metadata } from 'next';
 import Link from 'next/link';
+import Image from 'next/image';
 
 export const metadata: Metadata = {
   title: 'Snake River Farms - American Wagyu | F&G Meats',
@@ -11,41 +12,42 @@ export default function SnakeRiverFarmsPage() {
     <div className="min-h-screen bg-primary-900">
       {/* Hero Image Section */}
       <div className="relative h-[60vh] lg:h-[70vh] overflow-hidden">
-        {/* Placeholder for large program image */}
-        <div className="absolute inset-0 bg-gradient-to-br from-neutral-700 to-neutral-900">
-          <div className="w-full h-full flex items-center justify-center">
-            <div className="text-center">
-              <div className="w-32 h-32 bg-accent-500/20 rounded-full flex items-center justify-center mx-auto mb-6">
-                <span className="text-accent-500 text-4xl font-bold">SRF</span>
-              </div>
-              <p className="text-neutral-300 text-lg">Pacific Northwest Wagyu</p>
-            </div>
-          </div>
-        </div>
+        {/* Background Image */}
+        <Image
+          src="/images/Screenshot_23-1-2026_17394_.jpeg"
+          alt="Snake River Farms - Pacific Northwest Wagyu"
+          fill
+          className="object-cover"
+          quality={100}
+          priority
+        />
         {/* Dark overlay for text readability */}
         <div className="absolute inset-0 bg-black/40"></div>
       </div>
 
       {/* Program Info Section */}
-      <div className="relative -mt-32 z-10">
+      <div className="relative pt-20 z-10">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="bg-primary-900 rounded-lg p-8 lg:p-12 shadow-2xl text-center">
+          <div className="text-center">
             {/* Program Name */}
-            <h1 className="font-heading text-4xl sm:text-5xl lg:text-6xl text-neutral-100 mb-6 tracking-tight">
+            <h1 className="font-heading text-4xl sm:text-5xl lg:text-6xl text-neutral-100 mb-6 tracking-tight drop-shadow-lg">
               Snake River Farms
             </h1>
             
             {/* Brief Summary */}
-            <p className="font-body text-xl sm:text-2xl text-neutral-200 leading-relaxed mb-8 max-w-2xl mx-auto">
+            <p className="font-body text-xl sm:text-2xl text-neutral-200 leading-relaxed mb-8 max-w-2xl mx-auto drop-shadow-lg">
               Pioneer of American Wagyu since 1988, combining five decades of Idaho ranching tradition with Japanese genetics and heritage feeding methods.
             </p>
             
             {/* Inquire Now Button */}
             <a 
               href="/contact" 
-              className="inline-flex items-center px-10 py-4 bg-accent-500 text-primary-900 font-semibold text-lg rounded-lg hover:bg-accent-400 transition-colors shadow-lg"
+              className="inline-flex items-center px-10 py-4 bg-accent-500 text-primary-900 font-semibold text-lg rounded-lg hover:bg-accent-400 transition-all duration-300 shadow-lg hover:shadow-accent-500/50 hover:scale-105"
             >
               Inquire Now
+              <svg className="ml-2 w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
+              </svg>
             </a>
           </div>
         </div>

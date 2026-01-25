@@ -52,23 +52,6 @@ export default function ExoticsProgramPage() {
         </div>
       </div>
 
-      {/* Contact CTA */}
-      <div className="bg-primary-800 py-20">
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h3 className="font-heading text-3xl lg:text-4xl text-neutral-100 mb-6">
-            Ready to elevate your menu?
-          </h3>
-          <p className="text-neutral-300 text-lg mb-8 max-w-2xl mx-auto">
-            Contact our team to discuss pricing, availability, and custom cuts for your establishment.
-          </p>
-          <a 
-            href="/contact" 
-            className="inline-flex items-center px-8 py-4 bg-accent-500 text-primary-900 font-semibold rounded-lg hover:bg-accent-400 transition-colors"
-          >
-            Get in Touch
-          </a>
-        </div>
-      </div>
     </div>
   );
 }

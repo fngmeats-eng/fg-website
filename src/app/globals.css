@@ -18,10 +18,10 @@
   --color-primary-700: #1f1f1f;    /* Card backgrounds */
   --color-primary-600: #2a2a2a;    /* Elevated surfaces */
   
-  /* Accent - Gold/Warm tones for premium feel */
-  --color-accent-500: #c9a962;     /* Primary accent */
-  --color-accent-400: #d4b978;     /* Hover states */
-  --color-accent-300: #e0ca8e;     /* Light accent */
+  /* Accent - White to match logo */
+  --color-accent-500: #ffffff;     /* Primary accent - white */
+  --color-accent-400: #f5f5f5;     /* Hover states - slightly off-white */
+  --color-accent-300: #e5e5e5;     /* Light accent - light gray */
   
   /* Neutral - Text and borders */
   --color-neutral-100: #ffffff;    /* Primary text - 21:1 contrast */
@@ -711,4 +711,22 @@ textarea::placeholder {
 * {
   scrollbar-width: thin;
   scrollbar-color: var(--color-neutral-400) var(--color-primary-800);
+}
+
+/* About Page Background */
+.about-page-bg {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(/images/wagyu-grazing.jpg);
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+}
+
+/* Services Page Background */
+.services-page-bg {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(/images/OUR%20SERVICES%20.jpeg);
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
 }

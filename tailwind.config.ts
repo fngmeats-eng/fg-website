@@ -16,12 +16,11 @@ const config: Config = {
           700: "#1f1f1f", // Card backgrounds
           600: "#2a2a2a", // Elevated surfaces
         },
-        // Accent - Gold/Warm tones for premium feel
-        // WCAG AA compliant: #c9a962 on #0a0a0a = 8.2:1 contrast ratio
+        // Accent - White to match logo
         accent: {
-          500: "#c9a962", // Primary accent - 8.2:1 on dark backgrounds
-          400: "#d4b978", // Hover states - 9.5:1 on dark backgrounds
-          300: "#e0ca8e", // Light accent - 10.8:1 on dark backgrounds
+          500: "#ffffff", // Primary accent - white
+          400: "#f5f5f5", // Hover states - slightly off-white
+          300: "#e5e5e5", // Light accent - light gray
         },
         // Neutral - Text and borders
         // WCAG AA compliant text colors

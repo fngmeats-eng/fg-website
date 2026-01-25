@@ -36,10 +36,10 @@ function FormField({ label, htmlFor, required = false, error, children, icon }: 
     <div className="space-y-2">
       <label
         htmlFor={htmlFor}
-        className="block text-sm font-medium text-neutral-200"
+        className="block text-sm font-medium text-white"
       >
         {label}
-        {required && <span className="text-accent-500 ml-1">*</span>}
+        {required && <span className="text-white ml-1">*</span>}
       </label>
       <div className="relative">
         {icon && (
@@ -140,9 +140,9 @@ export default function ContactForm({ onSuccess, onError }: ContactFormProps) {
   // Input base styles
   const inputBaseStyles = cn(
     'w-full bg-primary-700 border border-neutral-400 rounded-md',
-    'text-neutral-100 placeholder:text-neutral-400',
+    'text-white placeholder:text-neutral-400',
     'transition-all duration-fast',
-    'focus:border-accent-500 focus:ring-2 focus:ring-accent-500/20 focus:outline-none',
+    'focus:border-white focus:ring-2 focus:ring-white/20 focus:outline-none',
     'disabled:opacity-50 disabled:cursor-not-allowed'
   );
 
@@ -154,13 +154,13 @@ export default function ContactForm({ onSuccess, onError }: ContactFormProps) {
     return (
       <AnimatedSection animation="fadeIn" className="w-full">
         <div className="bg-primary-700 rounded-lg p-8 text-center border border-success/30">
-          <div className="inline-flex items-center justify-center w-16 h-16 rounded-full bg-success/20 mb-6">
-            <CheckCircle className="w-8 h-8 text-success" />
+          <div className="inline-flex items-center justify-center w-16 h-16 rounded-full bg-white/20 mb-6">
+            <CheckCircle className="w-8 h-8 text-white" />
           </div>
-          <h3 className="font-heading text-2xl text-neutral-100 mb-3">
+          <h3 className="font-heading text-2xl text-white mb-3">
             Thank You for Reaching Out!
           </h3>
-          <p className="text-neutral-300 max-w-md mx-auto">
+          <p className="text-white/90 max-w-md mx-auto">
             We&apos;ve received your inquiry and will get back to you within 1-2 business days.
             Our team is excited to discuss how we can serve your business.
           </p>
@@ -181,13 +181,13 @@ export default function ContactForm({ onSuccess, onError }: ContactFormProps) {
       <div className="bg-primary-700 rounded-lg p-6 md:p-8 border border-neutral-400/20">
         {/* Form Header */}
         <div className="mb-8">
-          <h2 className="font-heading text-2xl md:text-3xl text-neutral-100 mb-2">
+          <h2 className="font-heading text-2xl md:text-3xl text-white mb-2">
             Get in Touch
           </h2>
-          <p className="text-neutral-300">
+          <p className="text-white/90">
             Fill out the form below and our team will respond promptly.
           </p>
-          <div className="w-16 h-1 bg-accent-500 mt-4" />
+          <div className="w-16 h-1 bg-white mt-4" />
         </div>
 
         {/* Contact Form */}
@@ -325,8 +325,8 @@ export default function ContactForm({ onSuccess, onError }: ContactFormProps) {
           </FormField>
 
           {/* Required Fields Note */}
-          <p className="text-sm text-neutral-400">
-            <span className="text-accent-500">*</span> Required fields
+          <p className="text-sm text-white/70">
+            <span className="text-white">*</span> Required fields
           </p>
 
           {/* Submit Button */}

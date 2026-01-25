@@ -71,7 +71,7 @@ export default function CompanyStory({
 
   return (
     <section
-      className="bg-primary-900 py-16 sm:py-20 lg:py-24"
+      className="py-16 sm:py-20 lg:py-24"
       aria-labelledby="company-story-heading"
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">

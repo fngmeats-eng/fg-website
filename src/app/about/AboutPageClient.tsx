@@ -11,21 +11,10 @@ import { MessageSquare, Phone } from 'lucide-react';
  * About Page Client Component
  * 
  * Client-side component for the About Us page with animations and interactivity.
- * 
- * Requirements Addressed:
- * - Requirement 4.1: Display the company story including founding history and growth
- * - Requirement 4.2: Display the company mission statement and core values
- * - Requirement 4.3: Display information about the leadership team or key personnel
- * - Requirement 4.4: Present content in a visually engaging layout with images
- * - Requirement 4.5: Include a CTA directing visitors to the Contact page
- * - Requirement 4.6: Maintain the premium dark aesthetic consistent with the overall site design
- * - Requirement 8.1: Dark/black primary color scheme reflecting premium positioning
- * - Requirement 8.2: Typography that conveys sophistication and readability
- * - Requirement 8.5: Subtle animations and transitions for interactive elements
  */
 export default function AboutPageClient() {
   return (
-    <main className="min-h-screen bg-primary-900">
+    <div className="min-h-screen w-full about-page-bg">
       {/* Page Header */}
       <AnimatedSection animation="fadeIn" className="pt-32 pb-12 md:pt-40 md:pb-16">
         <div className="container mx-auto px-4 md:px-6">
@@ -61,7 +50,7 @@ export default function AboutPageClient() {
 
       {/* Contact CTA Section */}
       <section
-        className="bg-primary-800 py-16 sm:py-20 lg:py-24 relative overflow-hidden"
+        className="bg-primary-800/90 py-16 sm:py-20 lg:py-24 relative overflow-hidden"
         aria-labelledby="contact-cta-heading"
       >
         {/* Decorative Background Elements */}
@@ -131,6 +120,6 @@ export default function AboutPageClient() {
           </AnimatedSection>
         </div>
       </section>
-    </main>
+    </div>
   );
 }

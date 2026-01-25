@@ -44,10 +44,13 @@ export default function ContactPageClient() {
   };
 
   return (
-    <main className="min-h-screen bg-primary-900">
+    <main className="min-h-screen bg-primary-900 bg-cover bg-center bg-no-repeat bg-fixed relative" style={{ backgroundImage: "url('/images/0364f8dc-cbe6-4354-8cb8-ee4c86f91c33.png')" }}>
+      {/* Dark overlay for entire page */}
+      <div className="absolute inset-0 bg-primary-900/85" />
+      
       {/* Page Header */}
       <section
-        className="bg-primary-900 pt-32 pb-12 sm:pt-36 sm:pb-16 lg:pt-40 lg:pb-20"
+        className="pt-32 pb-12 sm:pt-36 sm:pb-16 lg:pt-40 lg:pb-20 relative z-10"
         aria-labelledby="contact-page-heading"
       >
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -58,28 +61,28 @@ export default function ContactPageClient() {
                 className="inline-flex items-center justify-center mb-6"
                 aria-hidden="true"
               >
-                <div className="w-12 h-px bg-accent-500/50" />
-                <div className="w-2 h-2 mx-3 bg-accent-500 rotate-45" />
-                <div className="w-12 h-px bg-accent-500/50" />
+                <div className="w-12 h-px bg-white/50" />
+                <div className="w-2 h-2 mx-3 bg-white rotate-45" />
+                <div className="w-12 h-px bg-white/50" />
               </div>
 
               {/* Page Title */}
               <h1
                 id="contact-page-heading"
-                className="font-heading text-4xl sm:text-5xl lg:text-6xl text-neutral-100 mb-6"
+                className="font-heading text-4xl sm:text-5xl lg:text-6xl text-white mb-6"
               >
                 Contact Us
               </h1>
 
               {/* Decorative Divider */}
-              <div className="w-24 h-1 bg-accent-500 mx-auto mt-8 rounded-full" aria-hidden="true" />
+              <div className="w-24 h-1 bg-white mx-auto mt-8 rounded-full" aria-hidden="true" />
             </div>
           </AnimatedSection>
         </div>
       </section>
 
       {/* Main Content - Two Column Layout */}
-      <section className="bg-primary-900 pb-16 sm:pb-20 lg:pb-24">
+      <section className="pb-16 sm:pb-20 lg:pb-24 relative z-10">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           {/* Error Banner (if form submission failed) */}
           {formStatus === 'error' && errorMessage && (

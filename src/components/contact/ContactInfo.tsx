@@ -37,16 +37,16 @@ interface ContactInfoItemProps {
 
 function ContactInfoItem({ icon, label, value, href, delay = 0 }: ContactInfoItemProps) {
   const content = (
-    <div className="flex items-start gap-4 p-4 rounded-lg bg-primary-800/50 border border-neutral-400/10 transition-all duration-base hover:border-accent-500/30 hover:bg-primary-800">
+    <div className="flex items-start gap-4 p-4 rounded-lg bg-primary-800/50 border border-neutral-400/10 transition-all duration-base hover:border-white/30 hover:bg-primary-800">
       {/* Icon Container */}
-      <div className="flex-shrink-0 w-12 h-12 rounded-full bg-accent-500/10 border border-accent-500/30 flex items-center justify-center">
+      <div className="flex-shrink-0 w-12 h-12 rounded-full bg-white/10 border border-white/30 flex items-center justify-center">
         {icon}
       </div>
       
       {/* Content */}
       <div className="flex-1 min-w-0">
-        <p className="text-sm text-neutral-400 mb-1">{label}</p>
-        <p className="text-neutral-100 font-medium break-words">{value}</p>
+        <p className="text-sm text-white/70 mb-1">{label}</p>
+        <p className="text-white font-medium break-words">{value}</p>
       </div>
     </div>
   );
@@ -56,7 +56,7 @@ function ContactInfoItem({ icon, label, value, href, delay = 0 }: ContactInfoIte
       <AnimatedSection animation="slideUp" delay={delay}>
         <a
           href={href}
-          className="block focus:outline-none focus:ring-2 focus:ring-accent-500/50 rounded-lg"
+          className="block focus:outline-none focus:ring-2 focus:ring-white/50 rounded-lg"
           aria-label={`${label}: ${value}`}
         >
           {content}
@@ -137,14 +137,14 @@ export default function ContactInfo({
         <div className="p-6 sm:p-8 border-b border-neutral-400/10">
           <h3
             id="contact-info-heading"
-            className="font-heading text-xl sm:text-2xl text-neutral-100 mb-2"
+            className="font-heading text-xl sm:text-2xl text-white mb-2"
           >
             {title}
           </h3>
-          <p className="text-neutral-300 text-sm sm:text-base leading-relaxed">
+          <p className="text-white/90 text-sm sm:text-base leading-relaxed">
             {description}
           </p>
-          <div className="w-16 h-1 bg-accent-500 mt-4" />
+          <div className="w-16 h-1 bg-white mt-4" />
         </div>
       </AnimatedSection>
 
@@ -152,7 +152,7 @@ export default function ContactInfo({
       <div className="p-6 sm:p-8 space-y-4">
         {/* Phone */}
         <ContactInfoItem
-          icon={<Phone className="w-5 h-5 text-accent-500" aria-hidden="true" />}
+          icon={<Phone className="w-5 h-5 text-white" aria-hidden="true" />}
           label="Phone"
           value={phone}
           href={phoneHref}
@@ -161,7 +161,7 @@ export default function ContactInfo({
 
         {/* Email */}
         <ContactInfoItem
-          icon={<Mail className="w-5 h-5 text-accent-500" aria-hidden="true" />}
+          icon={<Mail className="w-5 h-5 text-white" aria-hidden="true" />}
           label="Email"
           value={email}
           href={emailHref}
@@ -172,8 +172,8 @@ export default function ContactInfo({
       {/* Footer Note */}
       <AnimatedSection animation="fadeIn" delay={0.5}>
         <div className="px-6 sm:px-8 py-4 bg-primary-800/50 border-t border-neutral-400/10">
-          <p className="text-neutral-400 text-xs sm:text-sm text-center">
-            <span className="text-accent-500">●</span>{' '}
+          <p className="text-white/70 text-xs sm:text-sm text-center">
+            <span className="text-white">●</span>{' '}
             We typically respond to inquiries within 1-2 business days.
           </p>
         </div>

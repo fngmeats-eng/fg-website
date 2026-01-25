@@ -1,5 +1,6 @@
 import type { Metadata } from 'next';
 import Link from 'next/link';
+import Image from 'next/image';
 
 export const metadata: Metadata = {
   title: 'St. Helens Beef - American Angus Choice | F&G Meats',
@@ -8,51 +9,52 @@ export const metadata: Metadata = {
 
 export default function StHelensBeefPage() {
   return (
-    <div className="min-h-screen bg-primary-900">
-      {/* Hero Image Section */}
-      <div className="relative h-[60vh] lg:h-[70vh] overflow-hidden">
-        {/* Placeholder for large program image */}
-        <div className="absolute inset-0 bg-gradient-to-br from-neutral-700 to-neutral-900">
-          <div className="w-full h-full flex items-center justify-center">
-            <div className="text-center">
-              <div className="w-32 h-32 bg-accent-500/20 rounded-full flex items-center justify-center mx-auto mb-6">
-                <span className="text-accent-500 text-4xl font-bold">SHB</span>
-              </div>
-              <p className="text-neutral-300 text-lg">St. Helens Ranch & Cattle</p>
-            </div>
-          </div>
-        </div>
-        {/* Dark overlay for text readability */}
-        <div className="absolute inset-0 bg-black/40"></div>
+    <div className="min-h-screen relative">
+      {/* Full Page Background Image */}
+      <div className="fixed inset-0 z-0">
+        <Image
+          src="/images/Screenshot_23-1-2026_18236_.jpeg"
+          alt="St. Helens Beef Background"
+          fill
+          className="object-cover"
+          quality={100}
+          priority
+        />
+        <div className="absolute inset-0 bg-black/60" />
       </div>
+      
+      <div className="relative z-10">
 
       {/* Program Info Section */}
-      <div className="relative -mt-32 z-10">
+      <div className="relative pt-20 z-10">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="bg-primary-900 rounded-lg p-8 lg:p-12 shadow-2xl text-center">
+          <div className="text-center">
             {/* Program Name */}
-            <h1 className="font-heading text-4xl sm:text-5xl lg:text-6xl text-neutral-100 mb-6 tracking-tight">
+            <h1 className="font-heading text-4xl sm:text-5xl lg:text-6xl text-neutral-100 mb-6 tracking-tight drop-shadow-lg">
               St. Helens Beef
             </h1>
             
             {/* Brief Summary */}
-            <p className="font-body text-xl sm:text-2xl text-neutral-200 leading-relaxed mb-8 max-w-2xl mx-auto">
+            <p className="font-body text-xl sm:text-2xl text-neutral-200 leading-relaxed mb-8 max-w-2xl mx-auto drop-shadow-lg">
               A chef-driven premium Angus program from the Pacific Northwest, delivering consistent marbling and clean flavor through pasture-raised, grain-finished cattle.
             </p>
             
             {/* Inquire Now Button */}
             <a 
               href="/contact" 
-              className="inline-flex items-center px-10 py-4 bg-accent-500 text-primary-900 font-semibold text-lg rounded-lg hover:bg-accent-400 transition-colors shadow-lg"
+              className="inline-flex items-center px-10 py-4 bg-accent-500 text-primary-900 font-semibold text-lg rounded-lg hover:bg-accent-400 transition-all duration-300 shadow-lg hover:shadow-accent-500/50 hover:scale-105"
             >
               Inquire Now
+              <svg className="ml-2 w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
+              </svg>
             </a>
           </div>
         </div>
       </div>
 
       {/* Detailed Description Section */}
-      <div className="py-20 lg:py-32">
+      <div className="py-20 lg:py-32 relative z-10">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="prose prose-lg prose-invert max-w-none">
             {/* Detailed Content */}
@@ -77,25 +79,23 @@ export default function StHelensBeefPage() {
 
               {/* Additional Images Section */}
               <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mt-12">
-                <div className="aspect-[4/3] bg-gradient-to-br from-neutral-800 to-neutral-900 rounded-lg overflow-hidden">
-                  <div className="w-full h-full flex items-center justify-center">
-                    <div className="text-center">
-                      <div className="w-16 h-16 bg-accent-500/20 rounded-full flex items-center justify-center mx-auto mb-4">
-                        <span className="text-accent-500 text-xl font-bold">🐄</span>
-                      </div>
-                      <span className="text-neutral-400">Pacific Northwest Rangeland</span>
-                    </div>
-                  </div>
+                <div className="aspect-[4/3] bg-gradient-to-br from-neutral-800 to-neutral-900 rounded-lg overflow-hidden relative">
+                  <Image
+                    src="/images/Screenshot_23-1-2026_18294_.jpeg"
+                    alt="Pacific Northwest Rangeland"
+                    fill
+                    className="object-cover"
+                    quality={90}
+                  />
                 </div>
-                <div className="aspect-[4/3] bg-gradient-to-br from-neutral-800 to-neutral-900 rounded-lg overflow-hidden">
-                  <div className="w-full h-full flex items-center justify-center">
-                    <div className="text-center">
-                      <div className="w-16 h-16 bg-accent-500/20 rounded-full flex items-center justify-center mx-auto mb-4">
-                        <span className="text-accent-500 text-xl font-bold">🥩</span>
-                      </div>
-                      <span className="text-neutral-400">Premium Angus Cuts</span>
-                    </div>
-                  </div>
+                <div className="aspect-[4/3] bg-gradient-to-br from-neutral-800 to-neutral-900 rounded-lg overflow-hidden relative">
+                  <Image
+                    src="/images/Screenshot_23-1-2026_182656_.jpeg"
+                    alt="Premium Angus Cuts"
+                    fill
+                    className="object-cover"
+                    quality={90}
+                  />
                 </div>
               </div>
             </div>
@@ -104,7 +104,7 @@ export default function StHelensBeefPage() {
       </div>
 
       {/* Breadcrumb at bottom */}
-      <div className="bg-primary-800 py-4">
+      <div className="bg-primary-800/80 py-4 relative z-10">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
           <nav className="flex text-sm text-neutral-300">
             <Link href="/" className="hover:text-accent-500 transition-colors">Home</Link>
@@ -114,6 +114,7 @@ export default function StHelensBeefPage() {
             <span className="text-neutral-100">St. Helens Beef</span>
           </nav>
         </div>
+      </div>
       </div>
     </div>
   );

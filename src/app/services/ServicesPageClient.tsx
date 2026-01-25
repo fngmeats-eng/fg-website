@@ -31,10 +31,19 @@ import AccountRequirements, {
  */
 export default function ServicesPageClient() {
   return (
-    <main className="min-h-screen bg-primary-900">
+    <div 
+      className="min-h-screen w-full"
+      style={{
+        backgroundImage: 'linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(/images/OUR%20SERVICES%20.jpeg)',
+        backgroundSize: 'cover',
+        backgroundPosition: 'center',
+        backgroundAttachment: 'fixed',
+        backgroundRepeat: 'no-repeat'
+      }}
+    >
       {/* Page Header */}
       <section
-        className="bg-primary-900 pt-32 pb-16 sm:pt-36 sm:pb-20 lg:pt-40 lg:pb-24"
+        className="pt-32 pb-16 sm:pt-36 sm:pb-20 lg:pt-40 lg:pb-24"
         aria-labelledby="services-page-heading"
       >
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -101,6 +110,6 @@ export default function ServicesPageClient() {
         ctaText={ACCOUNT_REQUIREMENTS_DATA.ctaText}
         ctaHref={ACCOUNT_REQUIREMENTS_DATA.ctaHref}
       />
-    </main>
+    </div>
   );
 }
