@@ -277,7 +277,7 @@ export default function HomePageClient() {
 
       {/* Our Service Section */}
       <FullSection 
-        backgroundImage="/images/OUR SERVICES .jpeg"
+        backgroundImage="/images/cannonball truck .jpeg"
         overlay="bg-black/55"
       >
         <div className="max-w-4xl mx-auto px-6 text-center">

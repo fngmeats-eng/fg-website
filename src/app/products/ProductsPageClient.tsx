@@ -11,9 +11,9 @@ import { MessageSquare, Phone } from 'lucide-react';
  */
 export default function ProductsPageClient() {
   return (
-    <main className="min-h-screen bg-primary-900 bg-cover bg-center bg-no-repeat bg-fixed relative" style={{ backgroundImage: "url('/images/OUR SERVICES .jpeg')" }}>
+    <main className="min-h-screen bg-primary-900 bg-cover bg-center bg-no-repeat bg-fixed relative" style={{ backgroundImage: "url('/images/DRR Valley.jpg')" }}>
       {/* Dark overlay for entire page */}
-      <div className="absolute inset-0 bg-primary-900/85" />
+      <div className="absolute inset-0 bg-primary-900/70" />
 
       {/* Page Header */}
       <AnimatedSection animation="fadeIn" className="pt-32 pb-12 md:pt-40 md:pb-16 relative z-10">
