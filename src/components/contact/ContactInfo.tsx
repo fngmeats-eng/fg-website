@@ -194,3 +194,4 @@ export const CONTACT_INFO_DATA: ContactInfoProps = {
   address: CONTACT_INFO.address,
   showBusinessHours: true,
 };
+
